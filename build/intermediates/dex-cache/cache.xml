@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/maheshbabusomineni/AndroidStudioProjects/Framework/app/libs/volley.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d4aaa36e04ee71a83444f8367c97a46fda662d2c">
+        <dex dex="/Users/maheshbabusomineni/AndroidStudioProjects/Framework/app/build/intermediates/pre-dexed/debug/volley-05605015b6228554bacb3a215f616617b3285902.jar" />
+    </item>
+    <item
+        jar="/Users/maheshbabusomineni/AndroidStudioProjects/Framework/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="/Users/maheshbabusomineni/AndroidStudioProjects/Framework/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-a51a04e260e1ef53730bc084ddd8e445f6de4f4f.jar" />
+    </item>
+    <item
+        jar="/Users/maheshbabusomineni/AndroidStudioProjects/Framework/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="/Users/maheshbabusomineni/AndroidStudioProjects/Framework/app/build/intermediates/pre-dexed/debug/classes-aa0a2e9a2f7f782365155476df87c3141cba9331.jar" />
+    </item>
+    <item
+        jar="/Users/maheshbabusomineni/AndroidStudioProjects/Framework/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/Users/maheshbabusomineni/AndroidStudioProjects/Framework/app/build/intermediates/pre-dexed/debug/classes-6797b696a38888ace08dd7c9e3a072b5b155adac.jar" />
+    </item>
+    <item
+        jar="/Users/maheshbabusomineni/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="/Users/maheshbabusomineni/AndroidStudioProjects/Framework/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-faa883cc58233c1b4493e3f8c41fb4c85c1859c6.jar" />
+    </item>
+
+</items>
