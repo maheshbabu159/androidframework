@@ -2,39 +2,46 @@
 <items version="2" >
 
     <item
-        jar="/Users/maheshbabusomineni/AndroidStudioProjects/Framework/app/libs/volley.jar"
+        jar="/Users/maheshbabusomineni/Desktop/AndroidWorkspace/MaterialDesign/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
         jumboMode="false"
-        revision="22.0.1"
+        revision="21.1.2"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Users/maheshbabusomineni/Desktop/AndroidWorkspace/MaterialDesign/app/build/intermediates/pre-dexed/debug/classes-3f8f936190401120d22a400e340ae806adafa6f4.jar" />
+    </item>
+    <item
+        jar="/Users/maheshbabusomineni/Desktop/AndroidWorkspace/MaterialDesign/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/Users/maheshbabusomineni/Desktop/AndroidWorkspace/MaterialDesign/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-e03bc2fcce24392c529608430e544af62550d38a.jar" />
+    </item>
+    <item
+        jar="/Users/maheshbabusomineni/Desktop/AndroidWorkspace/MaterialDesign/app/libs/volley.jar"
+        jumboMode="false"
+        revision="21.1.2"
         sha1="d4aaa36e04ee71a83444f8367c97a46fda662d2c">
-        <dex dex="/Users/maheshbabusomineni/AndroidStudioProjects/Framework/app/build/intermediates/pre-dexed/debug/volley-05605015b6228554bacb3a215f616617b3285902.jar" />
+        <dex dex="/Users/maheshbabusomineni/Desktop/AndroidWorkspace/MaterialDesign/app/build/intermediates/pre-dexed/debug/volley-987c12cdbbceeee8c5940c454851f8e00ed93cd3.jar" />
     </item>
     <item
-        jar="/Users/maheshbabusomineni/AndroidStudioProjects/Framework/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jar="/Users/maheshbabusomineni/Desktop/AndroidWorkspace/MaterialDesign/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
         jumboMode="false"
-        revision="22.0.1"
-        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="/Users/maheshbabusomineni/AndroidStudioProjects/Framework/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-a51a04e260e1ef53730bc084ddd8e445f6de4f4f.jar" />
+        revision="21.1.2"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="/Users/maheshbabusomineni/Desktop/AndroidWorkspace/MaterialDesign/app/build/intermediates/pre-dexed/debug/classes-bc88d1db425d63ec6dc23dd63d5dfd79beb7fa00.jar" />
     </item>
     <item
-        jar="/Users/maheshbabusomineni/AndroidStudioProjects/Framework/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
+        jar="/Users/maheshbabusomineni/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
         jumboMode="false"
-        revision="22.0.1"
-        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
-        <dex dex="/Users/maheshbabusomineni/AndroidStudioProjects/Framework/app/build/intermediates/pre-dexed/debug/classes-aa0a2e9a2f7f782365155476df87c3141cba9331.jar" />
+        revision="21.1.2"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/Users/maheshbabusomineni/Desktop/AndroidWorkspace/MaterialDesign/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-55f916386ef6759e9a3965746b15fe278eb29c8c.jar" />
     </item>
     <item
-        jar="/Users/maheshbabusomineni/AndroidStudioProjects/Framework/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jar="/Users/maheshbabusomineni/Desktop/AndroidWorkspace/MaterialDesign/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.3/classes.jar"
         jumboMode="false"
-        revision="22.0.1"
-        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="/Users/maheshbabusomineni/AndroidStudioProjects/Framework/app/build/intermediates/pre-dexed/debug/classes-6797b696a38888ace08dd7c9e3a072b5b155adac.jar" />
-    </item>
-    <item
-        jar="/Users/maheshbabusomineni/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
-        <dex dex="/Users/maheshbabusomineni/AndroidStudioProjects/Framework/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-faa883cc58233c1b4493e3f8c41fb4c85c1859c6.jar" />
+        revision="21.1.2"
+        sha1="4b8945fc23a7461c6fdde15753456d64b0a9358b">
+        <dex dex="/Users/maheshbabusomineni/Desktop/AndroidWorkspace/MaterialDesign/app/build/intermediates/pre-dexed/debug/classes-2354b79836266712673ba42e953d48238dffb889.jar" />
     </item>
 
 </items>
