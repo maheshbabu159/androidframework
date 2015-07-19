@@ -6,7 +6,9 @@ package androidhive.info.materialdesign.applevel;
 
 public class Constants {
 
-    public static final String base_url = "http://api.androidhive.info/volley/string_response.html";
+    public static final String base_url = "http://voxapi.voxpopulii.com/Api/";
+    public static final String root_url="http://voxapi.voxpopulii.com/";
+
     public static final String x_parse_application_id_key = "X-Parse-Application-Id";
     public static final String x_parse_application_id_value = "ORY7BYT28z07dlH1rdlZoJyL2PUOiszHBItyMVSb";
 
@@ -44,4 +46,11 @@ public class Constants {
             return text;
         }
     }
+
+
+
+
+    //Shared preference keys
+    public static final String access_token_default_key = "access_token";
+
 }

@@ -5,10 +5,15 @@ package androidhive.info.materialdesign.applevel;
  */
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.SharedPreferences;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class GlobalSettings {
+
+    public static final String MyPREFERENCES = "MyPrefs" ;
 
     public static ProgressDialog showProgressDialog(Activity activity) {
 
@@ -33,6 +38,16 @@ public class GlobalSettings {
         params.put(Constants.x_parse_rest_api_value,Constants.request_content_length_key);
 
         return params;
+    }
+
+    public static void updateAccessTokenSharedValue(String accessToken){
+
+        SharedPreferences sharedpreferences = GlobalSingleton.getContext().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+        editor.putString(Constants.access_token_default_key, accessToken);
+        editor.commit();
+
     }
 
 
