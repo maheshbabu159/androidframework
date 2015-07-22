@@ -39,6 +39,9 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        GlobalSingleton.setContext(this);
+
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
         setSupportActionBar(mToolbar);
@@ -104,7 +107,7 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
         final ProgressDialog progressDialog = GlobalSettings.showProgressDialog(this);
 
         StringRequest strReq = new StringRequest(Method.GET,
-                Constants.base_url, new Response.Listener<String>() {
+                Constants.root_url, new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {
@@ -178,6 +181,7 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
         }
 
         if (fragment != null) {
+
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container_body, fragment);

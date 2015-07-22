@@ -19,12 +19,18 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import androidhive.info.materialdesign.R;
+import androidhive.info.materialdesign.model.Project;
+
+import android.util.Base64;
 
 public class LoginActivity extends ActionBarActivity {
 
@@ -55,10 +61,11 @@ public class LoginActivity extends ActionBarActivity {
         final EditText usernameEditText = (EditText) findViewById(R.id.usernameEditText);
         final EditText passwordEditText = (EditText) findViewById(R.id.passwordEditText);
 
+        final String abdicationText = usernameEditText.getText().toString()+":"+passwordEditText.getText().toString();
 
         final ProgressDialog progressDialog = GlobalSettings.showProgressDialog(this);
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, Constants.root_url+ "token", new Response.Listener<String>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, Constants.root_url+ "project", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
 
@@ -66,16 +73,41 @@ public class LoginActivity extends ActionBarActivity {
 
                 GlobalSettings.hideProgressDialog(progressDialog);
 
-                JSONObject jsonResponse = null;
+                JSONArray jsonResponse = null;
+
                 try {
-                    jsonResponse = new JSONObject(response);
 
-                    if (jsonResponse.getString(Constants.access_token_default_key) != null) {
+                    ArrayList<Project> projectsArrayList = new ArrayList<Project>();
 
-                        GlobalSettings.updateAccessTokenSharedValue(jsonResponse.getString(Constants.access_token_default_key));
+                    jsonResponse = new JSONArray(response);
 
-                        Intent allPostIntent = new Intent(LoginActivity.this, MainActivity.class);
-                        startActivity(allPostIntent);
+                    if (jsonResponse.length() > 0) {
+
+                        // looping through json and adding to movies list
+                        for (int i = 0; i < response.length(); i++) {
+
+                            try {
+
+                                JSONObject projectJsonObject = jsonResponse.getJSONObject(i);
+
+                                Project project = new Project();
+                                project.setName(projectJsonObject.getString("name"));
+
+                                projectsArrayList.add(project);
+
+                            } catch (JSONException e) {
+
+                                Log.e("Parse Error:",  e.getMessage());
+                            }
+                        }
+
+
+                        //TODO:Navigate to home view
+                        Intent openNewActivity = new Intent(getApplicationContext(), MainActivity.class);
+                        //openNewActivity.putExtra("ProjectsList", projectsArrayList);
+                        GlobalSingleton.setProjectList(projectsArrayList);
+                        startActivity(openNewActivity);
+
                     }
 
                 } catch (JSONException e) {
@@ -90,13 +122,24 @@ public class LoginActivity extends ActionBarActivity {
                 GlobalSettings.hideProgressDialog(progressDialog);
 
             }
-        }){
+        })/*{
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("username", "venkata");
                 params.put("password", "@Venkata2015");
                 params.put("grant_type", "password");
+                return params;
+            }*/
+
+            {
+
+                @Override
+                public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String>  params = new HashMap<String, String>();
+                params.put("Authorization", "Basic "+ GlobalSettings.getBase64(abdicationText) );
+                params.put("Content-Type", "application/json");
+
                 return params;
             }
         };

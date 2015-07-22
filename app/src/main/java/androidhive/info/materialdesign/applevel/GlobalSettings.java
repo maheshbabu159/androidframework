@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Base64;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -35,7 +36,7 @@ public class GlobalSettings {
         Map<String,String> params = new HashMap<String, String>();
         params.put(Constants.request_content_type_value,Constants.request_content_type_key);
         params.put(Constants.x_parse_application_id_value,Constants.x_parse_application_id_key);
-        params.put(Constants.x_parse_rest_api_value,Constants.request_content_length_key);
+        params.put(Constants.x_parse_rest_api_value, Constants.request_content_length_key);
 
         return params;
     }
@@ -49,6 +50,8 @@ public class GlobalSettings {
         editor.commit();
 
     }
-
+    public static String getBase64(final String input) {
+        return Base64.encodeToString(input.getBytes(), Base64.DEFAULT);
+    }
 
 }

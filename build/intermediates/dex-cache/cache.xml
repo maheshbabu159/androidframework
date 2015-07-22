@@ -1,2 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/pre-dexed/debug/classes-a129dcfab54fcdfb8b5443e5556655fdbb65aeee.jar" />
+    </item>
+    <item
+        jar="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-bf34e5aa09128981ee258ffbee3625b245265bb0.jar" />
+    </item>
+    <item
+        jar="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/libs/volley.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="d4aaa36e04ee71a83444f8367c97a46fda662d2c">
+        <dex dex="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/pre-dexed/debug/volley-a4d04982244f752fcbbfe898a5eec6cb8302e837.jar" />
+    </item>
+    <item
+        jar="/Users/maheshbabusomineni/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-55f916386ef6759e9a3965746b15fe278eb29c8c.jar" />
+    </item>
+    <item
+        jar="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/pre-dexed/debug/classes-93d1986d167bbb84e60d14aae5f97ba8bdbf66f0.jar" />
+    </item>
+    <item
+        jar="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="4b8945fc23a7461c6fdde15753456d64b0a9358b">
+        <dex dex="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/pre-dexed/debug/classes-1e9474aa0c74676ce5beb2ca5d73ec87dcf95b0c.jar" />
+    </item>
+    <item
+        jar="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/exploded-aar/com.etsy.android.grid/library/1.0.5/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="8218789edb56bdcfff7da48e892b37460fc707e2">
+        <dex dex="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/pre-dexed/debug/classes-2b3bf88c28ad0f9c358e7e0c5d73d18a01f0eaf3.jar" />
+    </item>
+    <item
+        jar="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/exploded-aar/com.ogaclejapan.arclayout/library/1.0.1/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="d3124328d6e32a63e8481ca56be2f6a78e75be34">
+        <dex dex="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/pre-dexed/debug/classes-a15f6b4522de86b402c3000983aad0e8134d111e.jar" />
+    </item>
+
+</items>

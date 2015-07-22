@@ -20,6 +20,8 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:hint="Email"
+            android:text="srinivasa.karri"
+            android:textColor="#000000"
             android:textColorHint="#cccccc" />
         <EditText
             android:id="@+id/passwordEditText"
@@ -27,6 +29,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="-2dp"
             android:padding="10dp"
+            android:textColor="#000000"
+            android:text="madhuk"
             android:hint="Password"
             android:textColorHint="#cccccc"
             android:password="true" />
