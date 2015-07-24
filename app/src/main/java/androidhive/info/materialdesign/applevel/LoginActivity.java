@@ -29,6 +29,7 @@ import java.util.HashMap;
 import java.util.Map;
 import androidhive.info.materialdesign.R;
 import androidhive.info.materialdesign.model.Project;
+import androidhive.info.materialdesign.viewcontrollers.StaggeredGridActivity;
 
 import android.util.Base64;
 
@@ -103,9 +104,10 @@ public class LoginActivity extends ActionBarActivity {
 
 
                         //TODO:Navigate to home view
-                        Intent openNewActivity = new Intent(getApplicationContext(), MainActivity.class);
+                        Intent openNewActivity = new Intent(getApplicationContext(),
+                                StaggeredGridActivity.class);
                         //openNewActivity.putExtra("ProjectsList", projectsArrayList);
-                        GlobalSingleton.setProjectList(projectsArrayList);
+                        //GlobalSingleton.setProjectList(projectsArrayList);
                         startActivity(openNewActivity);
 
                     }
