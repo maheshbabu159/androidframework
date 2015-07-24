@@ -84,7 +84,7 @@ public class LoginActivity extends ActionBarActivity {
                     if (jsonResponse.length() > 0) {
 
                         // looping through json and adding to movies list
-                        for (int i = 0; i < response.length(); i++) {
+                        for (int i = 0; i < jsonResponse.length(); i++) {
 
                             try {
 
