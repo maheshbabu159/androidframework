@@ -107,7 +107,7 @@ public class LoginActivity extends ActionBarActivity {
                         Intent openNewActivity = new Intent(getApplicationContext(),
                                 StaggeredGridActivity.class);
                         //openNewActivity.putExtra("ProjectsList", projectsArrayList);
-                        //GlobalSingleton.setProjectList(projectsArrayList);
+                        GlobalSingleton.setProjectList(projectsArrayList);
                         startActivity(openNewActivity);
 
                     }

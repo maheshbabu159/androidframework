@@ -21,6 +21,8 @@ public class Constants {
 
     public static final String request_type_value = "POST";
 
+    public static final String TAG = "StaggeredGridActivity";
+
 
     //Web api request methods
     public enum RequestMethods {

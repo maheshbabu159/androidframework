@@ -10,40 +10,51 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.etsy.android.grid.util.DynamicHeightImageView;
 import com.etsy.android.grid.util.DynamicHeightTextView;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.util.ArrayList;
 import java.util.Random;
 import androidhive.info.materialdesign.R;
+import androidhive.info.materialdesign.applevel.Constants;
+import androidhive.info.materialdesign.model.Project;
 
 /**
  * Created by maheshbabusomineni on 7/24/15.
  */
 public class StaggeredGridAdapter extends ArrayAdapter<String> {
 
-    private static final String TAG = "SampleAdapter";
-
+    private ArrayList<Project> projectsList;
     static class ViewHolder {
+
         DynamicHeightTextView txtLineOne;
+        DynamicHeightImageView dynamicHeightImageView;
+
         Button btnGo;
     }
 
     private final LayoutInflater mLayoutInflater;
     private final Random mRandom;
+
     private final ArrayList<Integer> mBackgroundColors;
 
     private static final SparseArray<Double> sPositionHeightRatios = new SparseArray<Double>();
 
-    public StaggeredGridAdapter(final Context context, final int textViewResourceId) {
+    public StaggeredGridAdapter(final Context context, final int textViewResourceId,ArrayList<Project> projectsList) {
         super(context, textViewResourceId);
+
         mLayoutInflater = LayoutInflater.from(context);
+
         mRandom = new Random();
+
         mBackgroundColors = new ArrayList<Integer>();
         mBackgroundColors.add(R.color.orange);
         mBackgroundColors.add(R.color.green);
         mBackgroundColors.add(R.color.blue);
         mBackgroundColors.add(R.color.yellow);
         mBackgroundColors.add(R.color.grey);
+        projectsList = projectsList;
     }
 
     @Override
@@ -51,14 +62,17 @@ public class StaggeredGridAdapter extends ArrayAdapter<String> {
 
         ViewHolder vh;
         if (convertView == null) {
+
             convertView = mLayoutInflater.inflate(R.layout.list_item_sample, parent, false);
             vh = new ViewHolder();
-            vh.txtLineOne = (DynamicHeightTextView) convertView.findViewById(R.id.txt_line1);
-            vh.btnGo = (Button) convertView.findViewById(R.id.btn_go);
 
+            vh.txtLineOne = (DynamicHeightTextView) convertView.findViewById(R.id.textView1);
+            vh.btnGo = (Button) convertView.findViewById(R.id.btn_go);
+            vh.dynamicHeightImageView = (DynamicHeightImageView)convertView.findViewById(R.id.imageView1);
             convertView.setTag(vh);
         }
         else {
+
             vh = (ViewHolder) convertView.getTag();
         }
 
@@ -68,10 +82,13 @@ public class StaggeredGridAdapter extends ArrayAdapter<String> {
 
         convertView.setBackgroundResource(mBackgroundColors.get(backgroundIndex));
 
-        Log.d(TAG, "getView position:" + position + " h:" + positionHeight);
+        Log.d(Constants.TAG, "getView position:" + position + " h:" + positionHeight);
 
         vh.txtLineOne.setHeightRatio(positionHeight);
         vh.txtLineOne.setText(getItem(position) + position);
+
+        vh.dynamicHeightImageView.setHeightRatio(positionHeight);
+        ImageLoader.getInstance().displayImage(getItem(position), vh.dynamicHeightImageView);
 
         vh.btnGo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,7 +110,7 @@ public class StaggeredGridAdapter extends ArrayAdapter<String> {
         if (ratio == 0) {
             ratio = getRandomHeightRatio();
             sPositionHeightRatios.append(position, ratio);
-            Log.d(TAG, "getPositionRatio:" + position + " ratio:" + ratio);
+            Log.d(Constants.TAG, "getPositionRatio:" + position + " ratio:" + ratio);
         }
         return ratio;
     }

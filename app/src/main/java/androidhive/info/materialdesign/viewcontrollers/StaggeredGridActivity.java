@@ -22,51 +22,39 @@ import java.util.ArrayList;
 
 import androidhive.info.materialdesign.R;
 import androidhive.info.materialdesign.adapter.StaggeredGridAdapter;
+import androidhive.info.materialdesign.applevel.Constants;
 import androidhive.info.materialdesign.applevel.FragmentDrawer;
 import androidhive.info.materialdesign.applevel.GlobalSingleton;
+import androidhive.info.materialdesign.model.Project;
 import androidhive.info.materialdesign.model.SampleData;
 
 public class StaggeredGridActivity extends ActionBarActivity implements FragmentDrawer.FragmentDrawerListener,AbsListView.OnScrollListener, AbsListView.OnItemClickListener, AdapterView.OnItemLongClickListener {
 
-    private Toolbar mToolbar;
-    private StaggeredGridView mGridView;
     private StaggeredGridAdapter mAdapter;
-    public static final String SAVED_DATA_KEY = "SAVED_DATA";
-    private ArrayList<String> mData;
     private boolean mHasRequestedMore;
-    private static final String TAG = "StaggeredGridActivity";
-    private FragmentDrawer drawerFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_staggered_grid);
 
+        //Set the context
         GlobalSingleton.setContext(this);
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-
-        setSupportActionBar(mToolbar);
+        //Show the toolbar
+        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
+        /*drawerFragment = (FragmentDrawer)
+                getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
+        drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), mToolbar);
+        drawerFragment.setDrawerListener(this);*/
 
+        // display the first navigation drawer view on app launch
+        //displayView(0);
 
-        mGridView = (StaggeredGridView) findViewById(R.id.grid_view);
-        mAdapter = new StaggeredGridAdapter(this, R.id.txt_line1);
-
-
-        // do we have saved data?
-        if (savedInstanceState != null) {
-            mData = savedInstanceState.getStringArrayList(SAVED_DATA_KEY);
-        }
-
-        if (mData == null) {
-            mData = SampleData.generateSampleData();
-        }
-
-        for (String data : mData) {
-            mAdapter.add(data);
-        }
+        StaggeredGridView mGridView = (StaggeredGridView) findViewById(R.id.grid_view);
+        mAdapter = new StaggeredGridAdapter(this, R.id.textView1,GlobalSingleton.getProjectList());
 
         mGridView.setAdapter(mAdapter);
         mGridView.setOnScrollListener(this);
@@ -98,24 +86,23 @@ public class StaggeredGridActivity extends ActionBarActivity implements Fragment
     @Override
     protected void onSaveInstanceState(final Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putStringArrayList(SAVED_DATA_KEY, mData);
     }
 
     @Override
     public void onScrollStateChanged(final AbsListView view, final int scrollState) {
-        Log.d(TAG, "onScrollStateChanged:" + scrollState);
+        Log.d(Constants.TAG, "onScrollStateChanged:" + scrollState);
     }
 
     @Override
     public void onScroll(final AbsListView view, final int firstVisibleItem, final int visibleItemCount, final int totalItemCount) {
-        Log.d(TAG, "onScroll firstVisibleItem:" + firstVisibleItem +
+        Log.d(Constants.TAG, "onScroll firstVisibleItem:" + firstVisibleItem +
                 " visibleItemCount:" + visibleItemCount +
                 " totalItemCount:" + totalItemCount);
         // our handling
         if (!mHasRequestedMore) {
             int lastInScreen = firstVisibleItem + visibleItemCount;
             if (lastInScreen >= totalItemCount) {
-                Log.d(TAG, "onScroll lastInScreen - so load more");
+                Log.d(Constants.TAG, "onScroll lastInScreen - so load more");
                 mHasRequestedMore = true;
                 onLoadMoreItems();
             }
@@ -128,7 +115,7 @@ public class StaggeredGridActivity extends ActionBarActivity implements Fragment
             mAdapter.add(data);
         }
         // stash all the data in our backing store
-        mData.addAll(sampleData);
+        //mData.addAll(sampleData);
         // notify the adapter that we can update now
         mAdapter.notifyDataSetChanged();
         mHasRequestedMore = false;
