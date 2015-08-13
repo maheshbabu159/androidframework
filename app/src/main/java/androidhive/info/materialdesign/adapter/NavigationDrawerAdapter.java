@@ -11,7 +11,7 @@ import java.util.Collections;
 import java.util.List;
 
 import androidhive.info.materialdesign.R;
-import androidhive.info.materialdesign.model.NavDrawerItem;
+import androidhive.info.materialdesign.model.dataobjects.NavDrawerItem;
 
 
 /**

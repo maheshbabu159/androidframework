@@ -22,4 +22,16 @@
         <item>#fcba59</item>
         <item>#24c6d5</item>
     </string-array>
+    <color name="list_item_pressed">#1A000000</color>
+    <color name="path_primary">#E62F17</color>
+    <color name="path_orange">#FF9500</color>
+    <color name="path_blue">#1774E6</color>
+    <color name="path_black">#403B36</color>
+    <color name="path_green">#5FB336</color>
+    <color name="path_purple">#49098A</color>
+    <color name="view_background">#e8ecfa</color>
+    <color name="btn_bg">#277bec</color>
+    <color name="txt_font">#4e5572</color>
+    <color name="action_bar">#1f2649</color>
+
 </resources>

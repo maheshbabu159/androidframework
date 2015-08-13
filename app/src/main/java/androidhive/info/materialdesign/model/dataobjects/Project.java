@@ -1,19 +1,19 @@
-package androidhive.info.materialdesign.model;
+package androidhive.info.materialdesign.model.dataobjects;
 
 /**
  * Created by maheshbabusomineni on 7/22/15.
  */
 public class Project {
 
-    private String expand;
-    private String self;
-    private String id;
-    private String name;
-    private String key;
-    private String avatarUrls48x48;
-    private String avatarUrls24x24;
-    private String avatarUrls16x16;
-    private String avatarUrls32x32;
+    public String expand;
+    public String self;
+    public String id;
+    public String name;
+    public String key;
+    public String avatarUrls48x48;
+    public String avatarUrls24x24;
+    public String avatarUrls16x16;
+    public String avatarUrls32x32;
 
     public String getExpand() {
         return expand;

@@ -4,7 +4,7 @@ import android.content.Context;
 
 import java.util.ArrayList;
 
-import androidhive.info.materialdesign.model.Project;
+import androidhive.info.materialdesign.model.dataobjects.Project;
 
 /**
  * Created by maheshbabusomineni on 7/15/15.

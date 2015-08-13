@@ -14,13 +14,23 @@
         android:padding="10dp"
         >
 
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+
+            android:layout_height="wrap_content"
+            android:src="@drawable/vox_logo"
+            android:baselineAlignBottom="false"/>
         <EditText
             android:id="@+id/usernameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:hint="Email"
-            android:text="srinivasa.karri"
+            android:text="venkata"
             android:textColor="#000000"
             android:textColorHint="#cccccc" />
         <EditText

@@ -1,121 +1,122 @@
 package androidhive.info.materialdesign.adapter;
 
-import android.content.Context;
+import java.io.InputStream;
+import java.util.List;
+
+import com.etsy.android.grid.util.DynamicHeightImageView;
+import com.etsy.android.grid.util.DynamicHeightTextView;
+import com.xperi.avataimageview.DSAvatarImageView;
+
+import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.util.Log;
-import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.Toast;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-import com.etsy.android.grid.util.DynamicHeightImageView;
-import com.etsy.android.grid.util.DynamicHeightTextView;
-import com.nostra13.universalimageloader.core.ImageLoader;
+import org.w3c.dom.Text;
 
-import java.util.ArrayList;
-import java.util.Random;
-import androidhive.info.materialdesign.R;
 import androidhive.info.materialdesign.applevel.Constants;
-import androidhive.info.materialdesign.model.Project;
+import androidhive.info.materialdesign.model.dataobjects.PostsView;
+import androidhive.info.materialdesign.model.dataobjects.Project;
+import androidhive.info.materialdesign.R;
 
-/**
- * Created by maheshbabusomineni on 7/24/15.
- */
-public class StaggeredGridAdapter extends ArrayAdapter<String> {
 
-    private ArrayList<Project> projectsList;
-    static class ViewHolder {
+public class StaggeredGridAdapter extends ArrayAdapter<PostsView> {
 
-        DynamicHeightTextView txtLineOne;
-        DynamicHeightImageView dynamicHeightImageView;
+    Activity activity;
+    int resource;
+    List<PostsView> datas;
 
-        Button btnGo;
-    }
+    public StaggeredGridAdapter(Activity activity, int resource, List<PostsView> objects) {
+        super(activity, resource, objects);
 
-    private final LayoutInflater mLayoutInflater;
-    private final Random mRandom;
-
-    private final ArrayList<Integer> mBackgroundColors;
-
-    private static final SparseArray<Double> sPositionHeightRatios = new SparseArray<Double>();
-
-    public StaggeredGridAdapter(final Context context, final int textViewResourceId,ArrayList<Project> projectsList) {
-        super(context, textViewResourceId);
-
-        mLayoutInflater = LayoutInflater.from(context);
-
-        mRandom = new Random();
-
-        mBackgroundColors = new ArrayList<Integer>();
-        mBackgroundColors.add(R.color.orange);
-        mBackgroundColors.add(R.color.green);
-        mBackgroundColors.add(R.color.blue);
-        mBackgroundColors.add(R.color.yellow);
-        mBackgroundColors.add(R.color.grey);
-        projectsList = projectsList;
+        this.activity = activity;
+        this.resource = resource;
+        this.datas = objects;
     }
 
     @Override
-    public View getView(final int position, View convertView, final ViewGroup parent) {
+    public View getView(int position, View convertView, ViewGroup parent) {
 
-        ViewHolder vh;
-        if (convertView == null) {
+        final PostsView object = datas.get(position);
 
-            convertView = mLayoutInflater.inflate(R.layout.list_item_sample, parent, false);
-            vh = new ViewHolder();
+        View row = convertView;
+        final DealHolder holder;
 
-            vh.txtLineOne = (DynamicHeightTextView) convertView.findViewById(R.id.textView1);
-            vh.btnGo = (Button) convertView.findViewById(R.id.btn_go);
-            vh.dynamicHeightImageView = (DynamicHeightImageView)convertView.findViewById(R.id.imageView1);
-            convertView.setTag(vh);
+        if (row == null) {
+            LayoutInflater inflater = activity.getLayoutInflater();
+            row = inflater.inflate(resource, parent, false);
+
+            holder = new DealHolder();
+
+            if(!object.lin_pos.equals("text")){
+
+                holder.postDynamicHeightImageView = (DynamicHeightImageView) row.findViewById(R.id.postDynamicHeightImageView);
+
+            }
+
+            holder.usernameTextView = (TextView)row.findViewById(R.id.usernameTextView);
+            holder.descriptionDynamicHeightTextView = (DynamicHeightTextView)row.findViewById(R.id.descriptionDynamicHeightTextView);
+            holder.profileAvatarImageView = (DynamicHeightImageView)row.findViewById(R.id.profileAvatarImageView);
+            row.setTag(holder);
         }
         else {
-
-            vh = (ViewHolder) convertView.getTag();
+            holder = (DealHolder) row.getTag();
         }
 
-        double positionHeight = getPositionRatio(position);
-        int backgroundIndex = position >= mBackgroundColors.size() ?
-                position % mBackgroundColors.size() : position;
+        if(!object.lin_pos.equals("text")){
 
-        convertView.setBackgroundResource(mBackgroundColors.get(backgroundIndex));
+            new DownloadImageTask(holder.postDynamicHeightImageView)
+                    .execute(Constants.post_images_url+object.pos_pos);
 
-        Log.d(Constants.TAG, "getView position:" + position + " h:" + positionHeight);
+        }
 
-        vh.txtLineOne.setHeightRatio(positionHeight);
-        vh.txtLineOne.setText(getItem(position) + position);
+        new DownloadImageTask(holder.profileAvatarImageView)
+                .execute(Constants.profile_images_url+object.pho_usr);
 
-        vh.dynamicHeightImageView.setHeightRatio(positionHeight);
-        ImageLoader.getInstance().displayImage(getItem(position), vh.dynamicHeightImageView);
 
-        vh.btnGo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(final View v) {
-                Toast.makeText(getContext(), "Button Clicked Position " +
-                        position, Toast.LENGTH_SHORT).show();
+        //holder.image.setHeightRatio(1.0);
+        holder.usernameTextView.setText(object.getUsername());
+        holder.descriptionDynamicHeightTextView.setText(object.pos_pos);
+
+        return row;
+    }
+
+    static class DealHolder {
+        DynamicHeightImageView postDynamicHeightImageView;
+        TextView usernameTextView;
+        DynamicHeightTextView descriptionDynamicHeightTextView;
+        DynamicHeightImageView profileAvatarImageView;
+
+    }
+    private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
+        ImageView bmImage;
+
+        public DownloadImageTask(ImageView bmImage) {
+            this.bmImage = bmImage;
+        }
+
+        protected Bitmap doInBackground(String... urls) {
+            String urldisplay = urls[0];
+            Bitmap mIcon11 = null;
+            try {
+                InputStream in = new java.net.URL(urldisplay).openStream();
+                mIcon11 = BitmapFactory.decodeStream(in);
+            } catch (Exception e) {
+                Log.e("Error", e.getMessage());
+                e.printStackTrace();
             }
-        });
-
-        return convertView;
-    }
-
-    private double getPositionRatio(final int position) {
-        double ratio = sPositionHeightRatios.get(position, 0.0);
-        // if not yet done generate and stash the columns height
-        // in our real world scenario this will be determined by
-        // some match based on the known height and width of the image
-        // and maybe a helpful way to get the column height!
-        if (ratio == 0) {
-            ratio = getRandomHeightRatio();
-            sPositionHeightRatios.append(position, ratio);
-            Log.d(Constants.TAG, "getPositionRatio:" + position + " ratio:" + ratio);
+            return mIcon11;
         }
-        return ratio;
-    }
 
-    private double getRandomHeightRatio() {
-        return (mRandom.nextDouble() / 2.0) + 1.0; // height will be 1.0 - 1.5 the width
+        protected void onPostExecute(Bitmap result) {
+            bmImage.setImageBitmap(result);
+        }
     }
 }

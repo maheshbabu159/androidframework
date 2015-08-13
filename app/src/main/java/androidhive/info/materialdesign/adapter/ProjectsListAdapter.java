@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import androidhive.info.materialdesign.model.Project;
+import androidhive.info.materialdesign.model.dataobjects.Project;
 import androidhive.info.materialdesign.R;
 
 

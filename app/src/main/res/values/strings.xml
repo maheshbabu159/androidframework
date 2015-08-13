@@ -16,11 +16,25 @@
         <item>@string/nav_item_notifications</item>
     </string-array>
 
-    <string name="title_messages">Messages</string>
-    <string name="title_friends">Friends</string>
-    <string name="title_home">Home</string>
+    <string name="title_projects">Projects</string>
+    <string name="title_funding">Funding</string>
+    <string name="title_home">Posts</string>
     <string name="title_activity_login">LoginActivity</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_staggered_grid">StaggeredGridActivity</string>
+    <string name="title_activity_image_picker">ImagePickerActivity</string>
+
+    <string name="btnTakePicture">Capture Image</string>
+    <string name="btnRecordVideo">Record Video</string>
+    <string name="or">(or)</string>
+    <string name="btnUploadToServer">Upload to Server</string>
+    <string name="title_activity_upload">UploadActivity</string>
+    <string name="title_activity_android_multi_part_entity">AndroidMultiPartEntity</string>
+    <string name="hello">Hello World, PhotoIntentActivity!</string>
+    <string name="btnIntend">Take (big) Picture</string>
+    <string name="btnIntendS">Take (small) Picture</string>
+    <string name="btnIntendV">Take Video</string>
+    <string name="cannot">Cannot</string>
+    <string name="album_name">CameraSample</string>
 </resources>

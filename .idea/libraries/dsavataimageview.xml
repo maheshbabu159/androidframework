@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="dsavataimageview">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/dsavataimageview.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -6,7 +6,15 @@ package androidhive.info.materialdesign.applevel;
 
 public class Constants {
 
-    public static final String root_url="https://senecaglobal.jira.com/rest/api/latest/";
+    public static final String root_url="http://voxapi.voxpopulii.com/";
+    public static String serviceUrl = "http://voxapi.voxpopulii.com/Api/";
+
+    public static String post_images_url = "http://voxapi.voxpopulii.com/uploads/uploadpostsfilepath/";
+    public static String profile_images_url = "http://voxapi.voxpopulii.com/uploads/users/thumbnails/";
+    //public static String profile_images_url = "http://voxapi.voxpopulii.com/uploads/users/";
+
+
+    public static final String AppName = "Voxpopulii" ;
 
     public static final String x_parse_application_id_key = "X-Parse-Application-Id";
     public static final String x_parse_application_id_value = "ORY7BYT28z07dlH1rdlZoJyL2PUOiszHBItyMVSb";
@@ -28,6 +36,8 @@ public class Constants {
     public enum RequestMethods {
         LoginRequest("Login"),
         GetAllStudents("GetAllStudents"),
+        AddPost("AddPost"),
+        FileUpload("FileUpload"),
         ;
 
         private final String text;
@@ -48,10 +58,13 @@ public class Constants {
         }
     }
 
-
-
-
     //Shared preference keys
     public static final String access_token_default_key = "access_token";
+    public static final String user_name_default_key = "userName";
+    public static final String token_type_default_key = "token_type";
+    public static final String issued_date_default_key = ".issued";
+    public static final String expiry_date_default_key = ".expires";
+    public static final String expirs_in_default_key = "expires_in";
+    public static final String user_id_default_key = "ID_USR";
 
 }

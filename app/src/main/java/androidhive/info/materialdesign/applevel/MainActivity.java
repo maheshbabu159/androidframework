@@ -170,11 +170,11 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
                 break;
             case 1:
                 fragment = new FriendsFragment();
-                title = getString(R.string.title_friends);
+                title = getString(R.string.title_funding);
                 break;
             case 2:
                 fragment = new MessagesFragment();
-                title = getString(R.string.title_messages);
+                title = getString(R.string.title_projects);
                 break;
             default:
                 break;

@@ -1,4 +1,4 @@
-package androidhive.info.materialdesign.model;
+package androidhive.info.materialdesign.model.dataobjects;
 
 
 public class NavDrawerItem {
