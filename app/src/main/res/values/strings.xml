@@ -20,6 +20,7 @@
     <string name="title_funding">Funding</string>
     <string name="title_home">Posts</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="title_submit">Submit</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_staggered_grid">StaggeredGridActivity</string>
@@ -37,4 +38,8 @@
     <string name="btnIntendV">Take Video</string>
     <string name="cannot">Cannot</string>
     <string name="album_name">CameraSample</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="network_image">NetworkImage Activity</string>
+    <string name="title_activity_new">NewActivity</string>
+    <string name="title_activity_upload_to_server">UploadToServer</string>
 </resources>

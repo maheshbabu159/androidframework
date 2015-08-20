@@ -31,7 +31,7 @@ public class StaggeredGridAdapter extends ArrayAdapter<PostsView> {
 
     Activity activity;
     int resource;
-    List<PostsView> datas;
+    private List<PostsView> datas;
 
     public StaggeredGridAdapter(Activity activity, int resource, List<PostsView> objects) {
         super(activity, resource, objects);
@@ -40,7 +40,10 @@ public class StaggeredGridAdapter extends ArrayAdapter<PostsView> {
         this.resource = resource;
         this.datas = objects;
     }
+    public void setDatas(List<PostsView> datas) {
 
+        this.datas = datas;
+    }
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
@@ -70,7 +73,7 @@ public class StaggeredGridAdapter extends ArrayAdapter<PostsView> {
             holder = (DealHolder) row.getTag();
         }
 
-        if(!object.lin_pos.equals("text")){
+        if(!object.lin_pos.equals(Constants.PostType.Text.toString())){
 
             new DownloadImageTask(holder.postDynamicHeightImageView)
                     .execute(Constants.post_images_url+object.pos_pos);
@@ -78,17 +81,26 @@ public class StaggeredGridAdapter extends ArrayAdapter<PostsView> {
         }
 
         new DownloadImageTask(holder.profileAvatarImageView)
-                .execute(Constants.profile_images_url+object.pho_usr);
+                .execute(Constants.profile_images_url + object.pho_usr);
 
 
         //holder.image.setHeightRatio(1.0);
         holder.usernameTextView.setText(object.getUsername());
-        holder.descriptionDynamicHeightTextView.setText(object.pos_pos);
 
+
+        if(object.lin_pos.equals(Constants.PostType.Text.toString())) {
+
+            holder.descriptionDynamicHeightTextView.setText(object.pos_pos);
+
+        }else{
+            holder.descriptionDynamicHeightTextView.setText(object.tit_pos);
+
+        }
         return row;
     }
 
     static class DealHolder {
+
         DynamicHeightImageView postDynamicHeightImageView;
         TextView usernameTextView;
         DynamicHeightTextView descriptionDynamicHeightTextView;

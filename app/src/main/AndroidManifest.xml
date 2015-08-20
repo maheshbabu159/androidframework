@@ -4,9 +4,13 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-feature android:name="android.hardware.camera"
+
+    <uses-feature
+        android:name="android.hardware.camera"
         android:required="true" />
+
     <application
         android:name=".applevel.AppController"
         android:allowBackup="true"
@@ -22,17 +26,32 @@
             android:label="@string/title_activity_login" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".viewcontrollers.StaggeredGridActivity"
             android:label="@string/title_activity_staggered_grid" >
         </activity>
-        <activity android:name=".applevel.PhotoIntentActivity"
-            android:label= "PhotoIntentActivity">
+        <activity
+            android:name=".components.NetworkImageActivity"
+            android:label="@string/network_image" >
+        </activity>
+        <activity
+            android:name=".applevel.PhotoIntentActivity"
+            android:label="PhotoIntentActivity" >
+        </activity>
+        <activity
+            android:name=".applevel.NewActivity"
+            android:label="@string/title_activity_new" >
 
         </activity>
+        <activity
+            android:name=".applevel.UploadToServer"
+            android:label="@string/title_activity_upload_to_server" >
+                </activity>
     </application>
 
 </manifest>

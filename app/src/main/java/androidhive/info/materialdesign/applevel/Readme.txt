@@ -9,6 +9,8 @@
 }
 
 //userinfo response
+http://androidexample.com/Upload_File_To_Server_-_Android_Example/index.php?view=article_discription&aid=83&aaid=106
+
 
 String uri = String.format(Constants.serviceUrl + "User?username=%1$s", username);
 

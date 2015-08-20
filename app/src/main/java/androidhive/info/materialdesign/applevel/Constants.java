@@ -31,13 +31,22 @@ public class Constants {
 
     public static final String TAG = "StaggeredGridActivity";
 
+    //Shared preference keys
+    public static final String access_token_default_key = "access_token";
+    public static final String user_name_default_key = "userName";
+    public static final String token_type_default_key = "token_type";
+    public static final String issued_date_default_key = ".issued";
+    public static final String expiry_date_default_key = ".expires";
+    public static final String expirs_in_default_key = "expires_in";
+    public static final String user_id_default_key = "ID_USR";
+
 
     //Web api request methods
     public enum RequestMethods {
         LoginRequest("Login"),
         GetAllStudents("GetAllStudents"),
         AddPost("AddPost"),
-        FileUpload("FileUpload"),
+        FileUpload("UUIDImageUpload/PostAsync"),
         ;
 
         private final String text;
@@ -57,14 +66,30 @@ public class Constants {
             return text;
         }
     }
+    //Web api request methods
+    public enum PostType {
+        Text("text"),
+        Image("image"),
+        Audio("audio"),
+        Video("video"),
+        ;
 
-    //Shared preference keys
-    public static final String access_token_default_key = "access_token";
-    public static final String user_name_default_key = "userName";
-    public static final String token_type_default_key = "token_type";
-    public static final String issued_date_default_key = ".issued";
-    public static final String expiry_date_default_key = ".expires";
-    public static final String expirs_in_default_key = "expires_in";
-    public static final String user_id_default_key = "ID_USR";
+        private final String text;
+
+        /**
+         * @param text
+         */
+        private PostType(final String text) {
+            this.text = text;
+        }
+
+        /* (non-Javadoc)
+         * @see java.lang.Enum#toString()
+         */
+        @Override
+        public String toString() {
+            return text;
+        }
+    }
 
 }
