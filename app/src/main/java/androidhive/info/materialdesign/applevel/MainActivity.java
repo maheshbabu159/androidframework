@@ -176,6 +176,9 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
                 fragment = new MessagesFragment();
                 title = getString(R.string.title_projects);
                 break;
+            case 3:
+                finish();
+                break;
             default:
                 break;
         }

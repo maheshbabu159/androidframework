@@ -26,7 +26,8 @@
             app:arc_axisRadius="@dimen/layout_child_offset_path"
             app:arc_freeAngle="true"
             app:arc_origin="bottom"
-            app:arc_radius="@dimen/layout_radius_path" >
+            app:arc_radius="@dimen/layout_radius_path"
+            app:arc_color="#4D000000">
 
             <Button
                 style="@style/Item.Path"
@@ -68,9 +69,9 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/path_fab"
+        android:background="@drawable/path_red_oval"
         android:text="+"
-        android:textColor="@color/blue"
+        android:textColor="@color/white"
         android:textSize="24sp" />
 
 </RelativeLayout>

@@ -54,8 +54,10 @@ import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -85,8 +87,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     int serverResponseCode = 0;
 
     /**********  File Path *************/
-    String uploadFilePath = "/storage/sdcard1/";
-    final String uploadFileName = "1.jpg";
+    String uploadFilePath = null;
+    private String uploadFileName = null;
 
     private FrameLayout menuLayout;
     private View shareButton;
@@ -100,6 +102,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private  StaggeredGridAdapter mAdapter =null;
 
     private View dialogView = null;
+
 
     public HomeFragment() {
         // Required empty public constructor
@@ -164,14 +167,14 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
             // get prompts.xml view
             LayoutInflater li = LayoutInflater.from(getActivity());
-            View promptsView = li.inflate(R.layout.post_text_layout, null);
+            dialogView = li.inflate(R.layout.post_text_layout, null);
 
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
 
             // set prompts.xml to alertdialog builder
-            alertDialogBuilder.setView(promptsView);
+            alertDialogBuilder.setView(dialogView);
 
-            final EditText userInput = (EditText) promptsView
+            final EditText userInput = (EditText) dialogView
                     .findViewById(R.id.editTextDialogUserInput);
 
             // set dialog message
@@ -444,6 +447,51 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         ImageButton imageButton = (ImageButton)dialogView.findViewById(R.id.postImageButton);
 
         imageButton.setImageBitmap(selectedImage);
+
+        // TODO Auto-generated method stub
+        OutputStream output;
+
+        // Retrieve the image from the res folder
+
+
+        // Find the SD Card path
+        File filepath = Environment.getExternalStorageDirectory();
+
+        // Create a new folder in SD Card
+        File dir = new File(filepath.getAbsolutePath()
+                + "/temporary/");
+        dir.mkdirs();
+
+        double imageName = System.currentTimeMillis();
+        // Create a name for the saved image
+        File file = new File(dir,  Double.toString(imageName)+".png");
+
+        uploadFilePath =  filepath.getAbsolutePath()
+                + "/temporary/";
+
+        uploadFileName = Double.toString(imageName)+".png";
+
+        // Show a toast message on successful save
+        Toast.makeText(getActivity(), "Image Saved to SD Card",
+                Toast.LENGTH_SHORT).show();
+        try {
+
+            output = new FileOutputStream(file);
+
+            // Compress into png format image from 0% - 100%
+            selectedImage.compress(Bitmap.CompressFormat.PNG, 100, output);
+            output.flush();
+            output.close();
+        }
+
+        catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+
+
+
     }
     public String getRealPathFromURI(Uri contentUri) {
 
@@ -529,8 +577,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void postImageDetailsServiceCall(final String fileName){
 
         //Get post details
-        LayoutInflater inflater = getActivity().getLayoutInflater();
-        View dialogView = inflater.inflate(R.layout.image_post_layout, null);
 
         //Image Button implmentionation
         final EditText editText = (EditText)dialogView.findViewById(R.id.titleEditText);
@@ -572,7 +618,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 params.put("TAR_AUD_POS", "6");
                 params.put("ID_ORG_POS", "4");
                 params.put("ID_BSE_POS", "5");
-                params.put("POS_POS", "1.jpg");
+                params.put("POS_POS", uploadFileName);
                 params.put("KEYW_POS", "text");
                 params.put("LIN_POS", Constants.PostType.Image.toString());
                 params.put("TIT_POS", editText.getText().toString());

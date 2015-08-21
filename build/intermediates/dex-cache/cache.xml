@@ -2,32 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/apple/Desktop/androidframework/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
+        jar="/Users/apple/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.4.0/5b72bf48563ea8410e650de14aa33ff69a3e8c35/okio-1.4.0.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
-        <dex dex="/Users/apple/Desktop/androidframework/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-1d8505854f80943ac91a5f6caf610af7b645665f.jar" />
-    </item>
-    <item
-        jar="/Users/apple/Desktop/androidframework/app/libs/universal-image-loader.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="d2efc8f6c4ed6beb71d27595b19239c2b29b3dfb">
-        <dex dex="/Users/apple/Desktop/androidframework/app/build/intermediates/pre-dexed/debug/universal-image-loader-b9fc9f2f039374f314de51b9c079661eac44eae3.jar" />
-    </item>
-    <item
-        jar="/Users/apple/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.4.0/40340c0748190fe897baf7bffbc1b282734294e5/okhttp-2.4.0.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="40340c0748190fe897baf7bffbc1b282734294e5">
-        <dex dex="/Users/apple/Desktop/androidframework/app/build/intermediates/pre-dexed/debug/okhttp-2.4.0-f4a4a18db210cfc060ad4fc78912203541c916ea.jar" />
-    </item>
-    <item
-        jar="/Users/apple/Desktop/androidframework/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.3/classes.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="4b8945fc23a7461c6fdde15753456d64b0a9358b">
-        <dex dex="/Users/apple/Desktop/androidframework/app/build/intermediates/pre-dexed/debug/classes-84e81fe5be6f53ddb2b794fda48b9819cb247a8c.jar" />
+        sha1="5b72bf48563ea8410e650de14aa33ff69a3e8c35">
+        <dex dex="/Users/apple/Desktop/androidframework/app/build/intermediates/pre-dexed/debug/okio-1.4.0-fc3c93fd8a044f35744d3107bbbbd07acd3f5647.jar" />
     </item>
     <item
         jar="/Users/apple/Desktop/androidframework/app/libs/volley.jar"
@@ -37,11 +16,11 @@
         <dex dex="/Users/apple/Desktop/androidframework/app/build/intermediates/pre-dexed/debug/volley-909e24b55706a76f2e7e97e923ef2f7f90670661.jar" />
     </item>
     <item
-        jar="/Users/apple/Desktop/androidframework/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jar="/Users/apple/Desktop/androidframework/app/libs/universal-image-loader.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
-        <dex dex="/Users/apple/Desktop/androidframework/app/build/intermediates/pre-dexed/debug/classes-8eae139e3953d702e412f135a1365185dba3cae4.jar" />
+        sha1="d2efc8f6c4ed6beb71d27595b19239c2b29b3dfb">
+        <dex dex="/Users/apple/Desktop/androidframework/app/build/intermediates/pre-dexed/debug/universal-image-loader-b9fc9f2f039374f314de51b9c079661eac44eae3.jar" />
     </item>
     <item
         jar="/Users/apple/Desktop/androidframework/app/libs/dsavataimageview.jar"
@@ -51,32 +30,39 @@
         <dex dex="/Users/apple/Desktop/androidframework/app/build/intermediates/pre-dexed/debug/dsavataimageview-fc3cc9bd270dbf6e21c1cc8670200085f7eb292e.jar" />
     </item>
     <item
-        jar="/Users/apple/Desktop/androidframework/app/build/intermediates/exploded-aar/com.etsy.android.grid/library/1.0.5/classes.jar"
+        jar="/Users/apple/Desktop/androidframework/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/jars/classes.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="8218789edb56bdcfff7da48e892b37460fc707e2">
-        <dex dex="/Users/apple/Desktop/androidframework/app/build/intermediates/pre-dexed/debug/classes-ee77a73149b174e16bd656cf0ad56377bd042b8a.jar" />
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Users/apple/Desktop/androidframework/app/build/intermediates/pre-dexed/debug/classes-dddaf9af057ad49516986428a8b5cdb4f63ed3c3.jar" />
     </item>
     <item
-        jar="/Users/apple/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.4.0/5b72bf48563ea8410e650de14aa33ff69a3e8c35/okio-1.4.0.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="5b72bf48563ea8410e650de14aa33ff69a3e8c35">
-        <dex dex="/Users/apple/Desktop/androidframework/app/build/intermediates/pre-dexed/debug/okio-1.4.0-fc3c93fd8a044f35744d3107bbbbd07acd3f5647.jar" />
-    </item>
-    <item
-        jar="/Users/apple/Desktop/androidframework/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
+        jar="/Users/apple/Desktop/androidframework/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/jars/classes.jar"
         jumboMode="false"
         revision="21.1.1"
         sha1="d84409890828e07d344a3b9b1da545dba9897b51">
-        <dex dex="/Users/apple/Desktop/androidframework/app/build/intermediates/pre-dexed/debug/classes-d3c970920cbab04f086f6b2ea3a69d501091245d.jar" />
+        <dex dex="/Users/apple/Desktop/androidframework/app/build/intermediates/pre-dexed/debug/classes-b1be6e7d68ce469ec6bab1c3f292f980badd87ce.jar" />
     </item>
     <item
-        jar="/Users/apple/Desktop/androidframework/app/build/intermediates/exploded-aar/com.ogaclejapan.arclayout/library/1.0.1/classes.jar"
+        jar="/Users/apple/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.4.0/40340c0748190fe897baf7bffbc1b282734294e5/okhttp-2.4.0.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="d3124328d6e32a63e8481ca56be2f6a78e75be34">
-        <dex dex="/Users/apple/Desktop/androidframework/app/build/intermediates/pre-dexed/debug/classes-70580e16563ce7d75ee6ab068e04f6380ea14386.jar" />
+        sha1="40340c0748190fe897baf7bffbc1b282734294e5">
+        <dex dex="/Users/apple/Desktop/androidframework/app/build/intermediates/pre-dexed/debug/okhttp-2.4.0-f4a4a18db210cfc060ad4fc78912203541c916ea.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/androidframework/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.3/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="4b8945fc23a7461c6fdde15753456d64b0a9358b">
+        <dex dex="/Users/apple/Desktop/androidframework/app/build/intermediates/pre-dexed/debug/classes-d8141087254dc6ee09284f9b6a704e0397a67f11.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/androidframework/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/jars/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/Users/apple/Desktop/androidframework/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-c7dab4e953dcdcb1aad82d90d64a1c90edeee040.jar" />
     </item>
     <item
         jar="/softwares/adt-bundle-mac-x86_64-20140702/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
@@ -84,6 +70,20 @@
         revision="21.1.1"
         sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
         <dex dex="/Users/apple/Desktop/androidframework/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-5e40352ed2cc7fcbc08b0f7b2a50ec4d10b710fd.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/androidframework/app/build/intermediates/exploded-aar/com.ogaclejapan.arclayout/library/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="d3124328d6e32a63e8481ca56be2f6a78e75be34">
+        <dex dex="/Users/apple/Desktop/androidframework/app/build/intermediates/pre-dexed/debug/classes-594e3c4c5e1e6fd7e8b72f98864c9a4fde9d4380.jar" />
+    </item>
+    <item
+        jar="/Users/apple/Desktop/androidframework/app/build/intermediates/exploded-aar/com.etsy.android.grid/library/1.0.5/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="8218789edb56bdcfff7da48e892b37460fc707e2">
+        <dex dex="/Users/apple/Desktop/androidframework/app/build/intermediates/pre-dexed/debug/classes-f1fd5e77fdf82f740689ee030fd0ffb65a139f45.jar" />
     </item>
 
 </items>
