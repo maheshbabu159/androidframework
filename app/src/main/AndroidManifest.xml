@@ -17,15 +17,20 @@
         <activity
             android:name=".applevel.LoginActivity"
             android:label="@string/title_activity_login" >
+
+        </activity>
+        <activity
+            android:name=".viewcontrollers.StaggeredGridActivity"
+            android:label="@string/title_activity_staggered_grid" >
+        </activity>
+        <activity
+            android:name=".applevel.CardActivity"
+            android:label="@string/title_activity_staggered_grid" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".viewcontrollers.StaggeredGridActivity"
-            android:label="@string/title_activity_staggered_grid" >
         </activity>
     </application>
 

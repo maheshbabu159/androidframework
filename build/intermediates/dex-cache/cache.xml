@@ -2,6 +2,20 @@
 <items version="2" >
 
     <item
+        jar="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="00b0b7233e1ec64acebfac40d4983d32d4712426">
+        <dex dex="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/pre-dexed/debug/classes-16fc348ac58cee871f322826794b4e9be235745c.jar" />
+    </item>
+    <item
+        jar="/Users/maheshbabusomineni/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.4.0/5b72bf48563ea8410e650de14aa33ff69a3e8c35/okio-1.4.0.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="5b72bf48563ea8410e650de14aa33ff69a3e8c35">
+        <dex dex="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/pre-dexed/debug/okio-1.4.0-242fd7ac7fb7276d2d305b42db1a6f580e7acaa3.jar" />
+    </item>
+    <item
         jar="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/libs/universal-image-loader.jar"
         jumboMode="false"
         revision="21.1.1"
@@ -23,6 +37,13 @@
         <dex dex="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/pre-dexed/debug/classes-a129dcfab54fcdfb8b5443e5556655fdbb65aeee.jar" />
     </item>
     <item
+        jar="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/pre-dexed/debug/classes-93d1986d167bbb84e60d14aae5f97ba8bdbf66f0.jar" />
+    </item>
+    <item
         jar="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/libs/volley.jar"
         jumboMode="false"
         revision="21.1.1"
@@ -37,32 +58,18 @@
         <dex dex="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-55f916386ef6759e9a3965746b15fe278eb29c8c.jar" />
     </item>
     <item
-        jar="/Users/maheshbabusomineni/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.4.0/40340c0748190fe897baf7bffbc1b282734294e5/okhttp-2.4.0.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="40340c0748190fe897baf7bffbc1b282734294e5">
-        <dex dex="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/pre-dexed/debug/okhttp-2.4.0-effde90a186fafb98a5134a82d10093badb42d0b.jar" />
-    </item>
-    <item
-        jar="/Users/maheshbabusomineni/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.4.0/5b72bf48563ea8410e650de14aa33ff69a3e8c35/okio-1.4.0.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="5b72bf48563ea8410e650de14aa33ff69a3e8c35">
-        <dex dex="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/pre-dexed/debug/okio-1.4.0-242fd7ac7fb7276d2d305b42db1a6f580e7acaa3.jar" />
-    </item>
-    <item
-        jar="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
-        <dex dex="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/pre-dexed/debug/classes-93d1986d167bbb84e60d14aae5f97ba8bdbf66f0.jar" />
-    </item>
-    <item
         jar="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.3/classes.jar"
         jumboMode="false"
         revision="21.1.1"
         sha1="4b8945fc23a7461c6fdde15753456d64b0a9358b">
         <dex dex="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/pre-dexed/debug/classes-1e9474aa0c74676ce5beb2ca5d73ec87dcf95b0c.jar" />
+    </item>
+    <item
+        jar="/Users/maheshbabusomineni/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.4.0/40340c0748190fe897baf7bffbc1b282734294e5/okhttp-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="40340c0748190fe897baf7bffbc1b282734294e5">
+        <dex dex="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/pre-dexed/debug/okhttp-2.4.0-effde90a186fafb98a5134a82d10093badb42d0b.jar" />
     </item>
     <item
         jar="/Users/maheshbabusomineni/Desktop/iOSWorkspace/androidframework/app/build/intermediates/exploded-aar/com.etsy.android.grid/library/1.0.5/classes.jar"
