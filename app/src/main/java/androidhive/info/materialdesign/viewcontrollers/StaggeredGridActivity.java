@@ -1,34 +1,24 @@
 package androidhive.info.materialdesign.viewcontrollers;
 
-import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AbsListView;
-import android.widget.AdapterView;
-import android.widget.Toast;
 
 import com.etsy.android.grid.StaggeredGridView;
 
-import java.util.ArrayList;
-
 import androidhive.info.materialdesign.R;
 import androidhive.info.materialdesign.adapter.StaggeredGridAdapter;
-import androidhive.info.materialdesign.applevel.Constants;
 import androidhive.info.materialdesign.applevel.FragmentDrawer;
 import androidhive.info.materialdesign.applevel.GlobalSingleton;
-import androidhive.info.materialdesign.model.Project;
-import androidhive.info.materialdesign.model.SampleData;
+import androidhive.info.materialdesign.model.dataobjects.SampleData;
 
-public class StaggeredGridActivity extends ActionBarActivity implements FragmentDrawer.FragmentDrawerListener,AbsListView.OnScrollListener, AbsListView.OnItemClickListener, AdapterView.OnItemLongClickListener {
+public class StaggeredGridActivity extends ActionBarActivity implements FragmentDrawer.FragmentDrawerListener {
 
     private StaggeredGridAdapter mAdapter;
     private boolean mHasRequestedMore;
@@ -54,12 +44,10 @@ public class StaggeredGridActivity extends ActionBarActivity implements Fragment
         //displayView(0);
 
         StaggeredGridView mGridView = (StaggeredGridView) findViewById(R.id.grid_view);
-        mAdapter = new StaggeredGridAdapter(this, R.id.textView1,GlobalSingleton.getProjectList());
+        //mAdapter = new StaggeredGridAdapter(this, R.layout.list_item_sample,SampleData.generateSampleData());
 
         mGridView.setAdapter(mAdapter);
-        mGridView.setOnScrollListener(this);
-        mGridView.setOnItemClickListener(this);
-        mGridView.setOnItemLongClickListener(this);
+        //mGridView.setOnItemLongClickListener(this);
     }
 
     @Override
@@ -83,55 +71,8 @@ public class StaggeredGridActivity extends ActionBarActivity implements Fragment
 
         return super.onOptionsItemSelected(item);
     }
-    @Override
-    protected void onSaveInstanceState(final Bundle outState) {
-        super.onSaveInstanceState(outState);
-    }
 
-    @Override
-    public void onScrollStateChanged(final AbsListView view, final int scrollState) {
-        Log.d(Constants.TAG, "onScrollStateChanged:" + scrollState);
-    }
 
-    @Override
-    public void onScroll(final AbsListView view, final int firstVisibleItem, final int visibleItemCount, final int totalItemCount) {
-        Log.d(Constants.TAG, "onScroll firstVisibleItem:" + firstVisibleItem +
-                " visibleItemCount:" + visibleItemCount +
-                " totalItemCount:" + totalItemCount);
-        // our handling
-        if (!mHasRequestedMore) {
-            int lastInScreen = firstVisibleItem + visibleItemCount;
-            if (lastInScreen >= totalItemCount) {
-                Log.d(Constants.TAG, "onScroll lastInScreen - so load more");
-                mHasRequestedMore = true;
-                onLoadMoreItems();
-            }
-        }
-    }
-
-    private void onLoadMoreItems() {
-        final ArrayList<String> sampleData = SampleData.generateSampleData();
-        for (String data : sampleData) {
-            mAdapter.add(data);
-        }
-        // stash all the data in our backing store
-        //mData.addAll(sampleData);
-        // notify the adapter that we can update now
-        mAdapter.notifyDataSetChanged();
-        mHasRequestedMore = false;
-    }
-
-    @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-        Toast.makeText(this, "Item Clicked: " + position, Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id)
-    {
-        Toast.makeText(this, "Item Long Clicked: " + position, Toast.LENGTH_SHORT).show();
-        return true;
-    }
 
     @Override
     public void onDrawerItemSelected(View view, int position) {
@@ -148,11 +89,11 @@ public class StaggeredGridActivity extends ActionBarActivity implements Fragment
                 break;
             case 1:
                 fragment = new FriendsFragment();
-                title = getString(R.string.title_friends);
+                title = getString(R.string.title_projects);
                 break;
             case 2:
                 fragment = new MessagesFragment();
-                title = getString(R.string.title_messages);
+                title = getString(R.string.title_funding);
                 break;
             default:
                 break;

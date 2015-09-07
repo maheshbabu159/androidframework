@@ -20,7 +20,7 @@ import java.util.List;
 
 import androidhive.info.materialdesign.R;
 import androidhive.info.materialdesign.adapter.NavigationDrawerAdapter;
-import androidhive.info.materialdesign.model.NavDrawerItem;
+import androidhive.info.materialdesign.model.dataobjects.NavDrawerItem;
 
 
 public class FragmentDrawer extends Fragment {

@@ -24,8 +24,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:22.0.0'
     compile 'com.android.support:recyclerview-v7:21.0.+'
     compile files('libs/volley.jar')
+    compile files('libs/dsavataimageview.jar')
     compile files('libs/universal-image-loader.jar')
-
     compile 'com.etsy.android.grid:library:1.0.5' // see changelog
     compile 'com.ogaclejapan.arclayout:library:1.0.1@aar'
     compile 'com.squareup.okhttp:okhttp:2.4.0'
